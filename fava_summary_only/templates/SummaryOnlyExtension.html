@@ -1,0 +1,43 @@
+{#
+  fava_summary_only/templates/fava_summary_only.html
+  Info page shown when the user clicks "Summary Only" in the sidebar.
+  The CSS/JS injection happens via module.js (loaded on EVERY page).
+  This template is only for the info page itself.
+#}
+{% extends "_layout.html" %}
+
+{% block title %}Summary Only Mode{% endblock %}
+
+{% block content %}
+<header class="headerline">
+    <h1>Summary Only Mode</h1>
+</header>
+
+<div style="max-width: 42rem; padding: 1rem 0;">
+    <p>
+        This Fava instance is running in <strong>summary-only mode</strong>.
+        Transaction-level details and editing features are not available.
+    </p>
+
+    <h2>Available reports</h2>
+    <ul>
+        <li>Balance Sheet</li>
+        <li>Trial Balance</li>
+        <li>Commodities</li>
+        <li>Events</li>
+        <li>Statistics</li>
+    </ul>
+
+    <h2>What is restricted</h2>
+    <ul>
+        <li>Income Statement (per-period transaction breakdown)</li>
+        <li>Journal (full transaction list)</li>
+        <li>Query (ad-hoc BQL queries)</li>
+        <li>Documents (attached files)</li>
+        <li>Editor (source file editing)</li>
+        <li>Import (file import tool)</li>
+        <li>Options (configuration viewer)</li>
+        <li>Per-account pages (transaction drilldown)</li>
+    </ul>
+</div>
+{% endblock %}
