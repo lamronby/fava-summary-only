@@ -4,16 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fava-summary-only"
-version = "1.0.0"
+version = "0.1.0"
 description = "Fava extension: summary-only mode (hides transaction-level access)"
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
-dependencies = ["fava>=1.26"]
+dependencies = ["fava>=1.30"]
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["fava_summary_only*"]
 
 [tool.setuptools.package-data]
-fava_summary_only = ["templates/*"]
+fava_summary_only = ["*.js", "templates/*"]
